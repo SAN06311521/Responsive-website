@@ -1,38 +1,468 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.banner__content {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+.container {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.banner__text {
+  width: 500px;
+}
+.banner__text h3 {
+  font-size: 50px;
+}
+.banner__text h1 {
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+.banner__text p {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.5;
+}
+.navbar__text {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__ul {
+  width: 60%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.banner__btn {
+  margin-top: 35px;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 12px;
+  padding: 20px 40px;
+}
+.btn-smart {
+  background: rgb(255, 69, 79);
+}
+.about {
+  padding: 80px 0;
+}
+
+.p-25 {
+  padding: 45px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-6 {
+  width: 50%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333333333%;
+}
+.about h3 {
+  color: rgba(37, 37, 37, 0.7);
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.about h1 {
+  font-size: 40px;
+  color: #252525;
+  font-weight: 1000;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+.about p {
+  font-size: 18px;
+  color: #8b8b8b;
+  font-weight: 300;
+}
+
+.about__btn {
+  margin-top: 35px;
+  color: white!important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-shadow: none;
+  background-color: #f88c91;
+  padding: 5px 15px;
+  display: inline-block;
+  letter-spacing: 0.84px;
+  margin-top: 16px;
+  text-decoration: none;
+}
+.about__img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about__img img {
+  width: 100%;
+}
+.shop {
+  width: 100%;
+  background: url("/img/offer.jpg");
+  height: 450px;
+  background-attachment: fixed;
+}
+.shop__text {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  justify-content: center;
+  margin: 0 auto;
+  color: #fff!important;
+  z-index: 2;
+}
+.shop__text h1 {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.shop__btn {
+  margin-top: 35px;
+  z-index: 2;
+  color: white!important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-shadow: none;
+  background-color: #f88c91;
+  padding: 5px 15px;
+  display: inline-block;
+  letter-spacing: 0.84px;
+  text-decoration: none;
+}
+
+.overlay {
+  background: #2c2a2a8a;
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  z-index: 1;
+}
+
+.clients {
+  width: 100%;
+  padding: 100px 0;
+  background: url("/img/count.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+  height: 350px;
+}
+
+.client {
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  
+}
+.client h1 {
+  font-size: 75px;
+  text-shadow: "2px 3px 5px #9acae6";
+  z-index: 2;
+}
+.client p {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-shadow: "2px 3px 5px #9acae6";
+  z-index: 2;
+}
+
+.prices {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.price {
+  padding: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.price__img {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.price__img img {
+  width: 250px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.price__heading {
+  margin-top: 20px;
+  font-size: 25px;
+}
+.price__text {
+  margin-top: 15px;
+  color: #888888;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.price_rs {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.head {
+  color: #888888;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.para {
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.contact {
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin: 0;
+  background: url("/img/online-cake.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+.bg-text {
+  z-index: 2;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 2px 2px 24px #000;
+  margin-left: 100px;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  margin-top: 0em;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-input {
+  width: 100%;
+  font-family: 'Kaushan Script';
+  font-size: 18px;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #504444;
+  background-color: #bda4a4;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: rgb(15, 15, 15);
+}
+
+input[type=text]:focus, .form-input:focus {
+  box-shadow: 0 0 5px rgb(134, 179, 179);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgb(86, 105, 114);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+label span {
+  color: #f00;
+}
+
+.submit {
+  margin-top: 35px;
+  color: white!important;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f88c91;
+  padding: 12px 15px;
+  letter-spacing: 0.84px;
+  text-decoration: none;
+}
+
+.form-online {
+  text-align: center;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.main {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 60px;
+  color: rgb(211, 191, 191);
+}
+
+.sub-main {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 40px;
+  color: rgb(235, 224, 224);
+}
+
+.para-main {
+  font-size: 18px;
+  color: rgb(148, 126, 126);
+}
+
+.sub-para {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 17px;
+  color: rgb(235, 224, 224);
+  letter-spacing: 0.1em;
+}
+
+.footer {
+  background-color: rgb(66, 70, 68);
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.footer-main {
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-top: 20px;
+  letter-spacing: 00.1em;
+}
+
+
+.footer-para {
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 700px) {
+  .navbar__text {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+  .logo {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .container {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .banner__text {
+    width: auto;
+  }
+  .banner__text h3 {
+    font-size: 25px !important;
+  }
+  .banner__text h1 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 900;
+    margin-top: 20px;
+  }
+  .banner__text p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  .navbar__ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar__ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .col-3,
+  .col-4,
+  .col-6 {
+    width: 100%;
+  }
+  .client {
+    margin: 20px 0;
+  }
+  .about h1 {
+    font-size: 25px;
+  }
+  .shop h1 {
+    font-size: 25px;
+  }
+  .menu h1 {
+    font-size: 25px;
+  }
+  .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+    float: left;
   }
 }
+
+
